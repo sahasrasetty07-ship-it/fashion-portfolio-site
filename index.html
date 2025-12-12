@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House of SPJ - Fashion Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #111;
+            color: white;
+        }
+
+    
+        .navbar {
+            background: #000;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar a {
+            color: #f5d57a;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://i.pinimg.com/736x/80/7f/54/807f54fcd1d011a6ff0e0e41c43c319d.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .hero h1 {
+            font-size: 55px;
+            text-shadow: 0 0 10px black;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+            text-shadow: 0 0 10px black;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background: #f5d57a;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+    
+        section {
+            padding: 60px 30px;
+        }
+        h2 {
+            color: #f5d57a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: #222;
+            padding: 20px;
+        }
+
+    
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 0;
+        }
+
+    
+        #moodPopup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            padding: 40px;
+            overflow-y: scroll;
+            z-index: 100;
+        }
+        #moodPopup img {
+            width: 30%;
+            margin: 1%;
+        }
+        .closeBtn {
+            background: #f5d57a;
+            padding: 10px 15px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media(max-width:800px){
+            .grid-3 { grid-template-columns: 1fr; }
+            #moodPopup img { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#about">About</a>
+    <a href="#" onclick="openMood()">Moodboards</a>
+    <a href="#sketches">Design Sketches</a>
+    <a href="#colors">Color Palettes</a>
+    <a href="#fabrics">Fabric Swatches</a>
+    <a href="#final">Final Garments</a>
+    <a href="#photos">Photoshoots</a>
+    <a href="#process">Process Work</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="hero">
+    <div>
+        <h1>House of SPJ</h1>
+        <p>Your Couture. Your Story.</p>
+        <button class="btn" onclick="scrollToSection('about')">Enter</button>
+    </div>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center;">
+        We are House of SPJ — founded by  
+        <b>Jiya Srivastava • Prachi Gidvani • Sahasra setty</b>.
+        <br><br>
+        Our designs blend modern silhouettes with artistic storytelling.
+    </p>
+</section>
+
+<section id="sketches">
+    <h2>Design Sketches</h2>
+    <div class="grid-3">
+        <div class="card">Sketch 1</div>
+        <div class="card">Sketch 2</div>
+        <div class="card">Sketch 3</div>
+    </div>
+</section>
+
+<section id="colors">
+    <h2>Color Palettes</h2>
+    <div class="grid-3">
+        <div class="card">Palette 1</div>
+        <div class="card">Palette 2</div>
+        <div class="card">Palette 3</div>
+    </div>
+</section>
+
+<section id="fabrics">
+    <h2>Fabric Swatches</h2>
+    <div class="grid-3">
+        <div class="card">Fabric 1</div>
+        <div class="card">Fabric 2</div>
+        <div class="card">Fabric 3</div>
+    </div>
+</section>
+
+<section id="final">
+    <h2>Final Garments / Outfits</h2>
+    <div class="gallery grid-3">
+        <img src="https://i.pinimg.com/736x/5e/59/40/5e5940cf3b19ada630c6e7e8a5f3a1d5.jpg">
+        <img src="https://i.pinimg.com/1200x/df/5d/b2/df5db261ed5abd517a9433ed5d691873.jpg">
+        <img src="https://i.pinimg.com/736x/e9/10/73/e910732e4574bc422045e4b5a5a5f75e.jpg">
+        <img src="https://i.pinimg.com/1200x/f8/7b/fd/f87bfd89bc0ed543da1302d84ab4fd61.jpg">
+        <img src="https://i.pinimg.com/1200x/86/ef/2d/86ef2dcdef8d710814e59cfe660197fe.jpg">
+        <img src="https://i.pinimg.com/736x/8b/be/e9/8bbee9ced0bd13ba4188b6c77389858c.jpg">
+        <img src="https://i.pinimg.com/736x/8b/be/e9/8bbee9ced0bd13ba4188b6c77389858c.jpg">
+        <img src="https://i.pinimg.com/736x/fe/45/b2/fe45b28eaa579ccba338b0d0b11ae612.jpg">
+        <img src="https://i.pinimg.com/1200x/fd/a0/8e/fda08e08e1aa9647e3926722d348ec69.jpg">
+    </div>
+</section>
+
+<section id="photos">
+    <h2>Photoshoots / Lookbook</h2>
+    <div class="grid-3">
+        <div class="card">Ethereal Couture</div>
+        <div class="card">Celestial Silhouettes</div>
+        <div class="card">Divine Drapes</div>
+    </div>
+</section>
+
+<section id="process">
+    <h2>Process Work</h2>
+    <div class="grid-3">
+        <div class="card">Idea Stage</div>
+        <div class="card">Sketching Stage</div>
+        <div class="card">Final Garment</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Info</h2>
+    <p style="text-align:center;">
+        Email: <b>houseofspj@gmail.com</b> <br>
+        Instagram: <b>@houseofspj</b>
+    </p>
+</section>
+
+<div id="moodPopup">
+    <button class="closeBtn" onclick="closeMood()">Close</button>
+    <h2 style="text-align:center; color:#f5d57a;">Moodboards</h2>
+    <br>
+    <img src="https://i.pinimg.com/736x/cf/96/d2/cf96d20fbbe9ae0d17f3ef3543a55d5b.jpg">
+    <img src="https://i.pinimg.com/1200x/7d/aa/1f/7daa1f177aaa14d718a0a39642101a3a.jpg">
+    <img src="https://i.pinimg.com/1200x/11/54/0e/11540ef7e68f42d4f75e140bf59c68ba.jpg">
+</div>
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+function openMood(){
+    document.getElementById("moodPopup").style.display = "block";
+}
+
+function closeMood(){
+    document.getElementById("moodPopup").style.display = "none";
+}
+</script>
+  
+
+    <footer>
+        <p>© 2025 House of SPJ — Founders: Jiya Srivastava, Prachi Gidvani & Sahasra Setty</p>
+    </footer>
+
+</body>
+</html>
+
+
+
